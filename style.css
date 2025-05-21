@@ -4,8 +4,16 @@
     --body-font: "Playfair Display", serif;
     --logo-font: "Cookie", cursive;
     --nav-font: "inter", sans-serif;
+    --global-bg: hsl(240, 7.69%, 7.65%);
+    --elevated1-bg:hsl(240, 7.69%, 11.65%); /* 1 & 2 Buttons, cards, and small containers that need subtle elevation.*/
+    --elevated2-bg:hsl(240, 7.69%, 13.65%); 
+    --elevated3-bg:hsl(240, 7.69%, 15.65%); /* 3 & 4 Modals, dialogs, and primary interactive elements that require more prominence.*/
+    --elevated4-bg:hsl(240, 7.69%, 17.65%); /* Hover states, focus indicators, and other highly interactive elements.*/
+    --default-text-color: #f0f0f0;
 }
-
+html {
+    background-color: var(--global-bg);
+}
 /* ===== Flex Container for Layout ===== */
 .flex-container {
     display: flex;
@@ -21,6 +29,8 @@ header{
     align-items: center;
     height: 2rem;
     padding: 30px 10%;
+    background-color: var(--elevated1-bg);
+    color: var(--default-text-color);
     /* background-color: blue; */
 }
 
