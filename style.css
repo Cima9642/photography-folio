@@ -1,35 +1,83 @@
+/* ===== Root Variables for Fonts ===== */
 :root {
-
+    --header-font: "Oswald", sans-serif;
+    --body-font: "Playfair Display", serif;
+    --logo-font: "Cookie", cursive;
+    --nav-font: "inter", sans-serif;
 }
+
+/* ===== Flex Container for Layout ===== */
 .flex-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;;
-
 }
+
+/* ===== Header Styling ===== */
 header{
+    font-family:var(--nav-font) ;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 2rem;
     padding: 30px 10%;
-    background-color: blue;
+    /* background-color: blue; */
 }
+
+/* ===== Navbar Container ===== */
+.navbar{
+    display:flex;
+    align-items: center; 
+   /* background-color: red;*/   
+}
+
+/* ===== Logo Styling ===== */
 .logo{
     cursor: pointer;
     margin-right: auto;
-    font-family: "Cookie", cursive;
+    font-family: var(--logo-font);
     font-weight: 400;
     font-size: 2rem;
     font-style: bold;
 }
-.navbar{
-    display:flex;
-    align-items: center; 
-    background-color: red;   
+
+/* ===== Navigation Links List ===== */
+.nav-links{
+    list-style: none;;
 }
-.navbar ul{
-    display: flex;
-    list-style: none;
-    background-color: white;
+
+/* ===== Navigation List Items ===== */
+.nav-links li{
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+/* ===== Navigation Link Styling ===== */
+.nav-links li a{
+    text-decoration: none;
+    font-family: var(--nav-font);
+    font-size: 1.2rem;
+    transition: all 0.3s ease 0s;
+}
+
+/* ===== Visited Navigation Link ===== */
+.nav-links li a:visited{
+    color: inherit;
+}
+
+/* ===== Hover Effect for Navigation Links ===== */
+.nav-links li a:hover{
+    color: white; /* Change to your desired hover color */
+    font-weight: 600;
+}
+
+/* ===== Navbar Button Styling ===== */
+.navbar button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: var(--nav-font);
 }
