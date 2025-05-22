@@ -31,138 +31,69 @@ html {
   color: var(--default-text-color);
   font-family: var(--body-font);
 }
-/* ===== Flex Container for Layout ===== */
 
 nav {
-  display: flex;
-  align-items: center;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 2rem;
-  padding: 1rem 2rem;
-  background-color: var(--elevated1-bg);
-  font-family: var(--nav-font);
-  font-weight: 300;
-  color: var(--default-text-color);
+    background-color: var(--elevated1-bg);
+    border-bottom: 1px solid var(--elevated4-bg);
 }
-
-/* ===== Logo Styling ===== */
-.logo {
-  cursor: pointer;
-  margin-right: auto;
-  font-family: var(--logo-font);
-  font-weight: 500;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-/* ===== Navigation Links List ===== */
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-justify-content: flex-end;
-  
-}
-
-/* ===== Navigation List Items ===== */
-.nav-links li {
-  display: inline-block;
-  padding: 0 1rem;
-}
-
-/* ===== Navigation Link Styling ===== */
-.nav-links li a {
-  text-decoration: none;
-  font-family: var(--nav-font);
-  font-size: 1.2rem;
-  transition: all 0.3s ease 0s;
-  color: var(--default-text-color);
-}
-
-/* ===== Visited Navigation Link ===== */
-.nav-links li a:visited {
-  color: inherit;
-}
-
-/* ===== Hover Effect for Navigation Links ===== */
-.nav-links li a:hover {
-  color: white; /* Change to your desired hover color */
-  font-weight: 600;
-}
-
-/* ===== Navbar Button Styling ===== */
-.nav-links button {
-  padding: 9px 25px;
-  border: none;
-  border-radius: 50px;
-  background-color: var(--accent-color);
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  font-family: var(--nav-font);
-}
-.nav-links button:hover {
-  background-color: var(--elevated4-bg);
-  color: var(--default-text-color);
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  
-  justify-content: center;
-  width: 34px;
- 
-}
-.hamburger .bar {
-  flex-basis: 100%;
-  height: 4px;
-  background: var(--default-text-color);
-  margin: 3px;
-  
-}
-
-/* ===== Responsive Design for Mobile Devices ===== */
-@media (max-width: 768px) {
-    nav{
-        flex-wrap: wrap;
-        background-color: white;
-    }
-  .hamburger {
+nav ul{
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    background-color: red;
-  }
-  .logo {
-    height: auto;
+}
+nav .home-li{
+    margin-right: auto;
+
+}
+nav li{
+    display:flex;
+}
+nav a {
+    display: flex;
+    text-decoration: none;
+    font-family: var(--nav-font);
+    font-weight: 300;
+    padding: 1em 2em;
+    transition: background-color 0.3s ease;
     
-    background-color: blue;
-  }
-  .nav-links {
-    display: none;
-    flex-basis: 100%;
-   /* flex-direction: column;*/
-    transition: all 0.3s ease 0s;
-    flex-wrap: wrap;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links li {
-    flex-basis: 100%;
-  }
-  .nav-links a {
-    text-align: center;
-    font-size: 28px;
-  }
-  .nav-links .cta {
-    padding: 30px 16px;
-    margin-left: 0;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 20px;
-  }
+}
+nav a:hover{
+    background-color: var(--elevated4-bg);
+}
+nav a.active-link{
+    border-bottom: 2px solid var(--default-text-color);
+}
+nav a.accent-link{
+    background-color: var(--accent-color);
+    color: var(--global-bg);
+}
+@media screen and (max-width: 700px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid var(--elevated4-bg);
+        transition: right 300ms ease-out;
+    }
+    nav.show{
+        right: 0;
+    }
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    nav a{
+        width: 100%;
+        padding-left: 2.5em;
+    }
+    nav a.active-link{
+        border-bottom: none;
+    }
+    nav .home-li{
+        margin-right: unset
+    }
+
+   
 }

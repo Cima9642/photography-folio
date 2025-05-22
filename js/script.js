@@ -1,13 +1,9 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-let menuOpen = false;
+const navbar = document.querySelector('#navbar');
 
-hamburger.addEventListener('click', () => {
-    if (menuOpen === false) {
-        navLinks.style.display = 'flex'; // change to block maybe?
-        menuOpen = true;
-    } else if (menuOpen === true) {
-        navLinks.style.display = 'none';
-        menuOpen = false;
-    }
-});
+function openSidebar() {
+    
+    navbar.classList.add('show');
+}
+function closeSidebar() {
+    navbar.classList.remove('show');
+}
