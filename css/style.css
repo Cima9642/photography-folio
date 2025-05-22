@@ -1,0 +1,168 @@
+:root {
+  /* ===== Root Variables for Fonts ===== */
+  --header-font: "Oswald", sans-serif;
+  --body-font: "Playfair Display", serif;
+  --logo-font: "Cookie", cursive;
+  --nav-font: "Inter", sans-serif;
+  /* ===== Root Variables for Colors ===== */
+  --accent-color: hsl(47.2, 100%, 40.12%);
+  --global-bg: hsl(240, 7.69%, 7.65%);
+  --elevated1-bg: hsl(
+    240,
+    7.69%,
+    11.65%
+  ); /* 1 & 2 Buttons, cards, and small containers that need subtle elevation.*/
+  --elevated2-bg: hsl(240, 7.69%, 13.65%);
+  --elevated3-bg: hsl(
+    240,
+    7.69%,
+    15.65%
+  ); /* 3 & 4 Modals, dialogs, and primary interactive elements that require more prominence.*/
+  --elevated4-bg: hsl(
+    240,
+    7.69%,
+    17.65%
+  ); /* Hover states, focus indicators, and other highly interactive elements.*/
+  --default-text-color: #f0f0f0;
+}
+
+html {
+  background-color: var(--global-bg);
+  color: var(--default-text-color);
+  font-family: var(--body-font);
+}
+/* ===== Flex Container for Layout ===== */
+
+nav {
+  display: flex;
+  align-items: center;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--elevated1-bg);
+  font-family: var(--nav-font);
+  font-weight: 300;
+  color: var(--default-text-color);
+}
+
+/* ===== Logo Styling ===== */
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  font-family: var(--logo-font);
+  font-weight: 500;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+/* ===== Navigation Links List ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+justify-content: flex-end;
+  
+}
+
+/* ===== Navigation List Items ===== */
+.nav-links li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+/* ===== Navigation Link Styling ===== */
+.nav-links li a {
+  text-decoration: none;
+  font-family: var(--nav-font);
+  font-size: 1.2rem;
+  transition: all 0.3s ease 0s;
+  color: var(--default-text-color);
+}
+
+/* ===== Visited Navigation Link ===== */
+.nav-links li a:visited {
+  color: inherit;
+}
+
+/* ===== Hover Effect for Navigation Links ===== */
+.nav-links li a:hover {
+  color: white; /* Change to your desired hover color */
+  font-weight: 600;
+}
+
+/* ===== Navbar Button Styling ===== */
+.nav-links button {
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-family: var(--nav-font);
+}
+.nav-links button:hover {
+  background-color: var(--elevated4-bg);
+  color: var(--default-text-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  
+  justify-content: center;
+  width: 34px;
+ 
+}
+.hamburger .bar {
+  flex-basis: 100%;
+  height: 4px;
+  background: var(--default-text-color);
+  margin: 3px;
+  
+}
+
+/* ===== Responsive Design for Mobile Devices ===== */
+@media (max-width: 768px) {
+    nav{
+        flex-wrap: wrap;
+        background-color: white;
+    }
+  .hamburger {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+  }
+  .logo {
+    height: auto;
+    
+    background-color: blue;
+  }
+  .nav-links {
+    display: none;
+    flex-basis: 100%;
+   /* flex-direction: column;*/
+    transition: all 0.3s ease 0s;
+    flex-wrap: wrap;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    flex-basis: 100%;
+  }
+  .nav-links a {
+    text-align: center;
+    font-size: 28px;
+  }
+  .nav-links .cta {
+    padding: 30px 16px;
+    margin-left: 0;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+}
