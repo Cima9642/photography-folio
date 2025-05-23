@@ -30,6 +30,7 @@ html {
   background-color: var(--global-bg);
   color: var(--default-text-color);
   font-family: var(--body-font);
+  scroll-behavior: smooth;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: var(--header-font);
@@ -45,9 +46,14 @@ nav ul{
     list-style: none;
     display: flex;
 }
+
+.home-li a{
+    font-weight: 500;
+    
+}
 nav .home-li{
     margin-right: auto;
-
+    font-weight: 500;    
 }
 nav li{
     display:flex;
@@ -71,6 +77,11 @@ nav a.accent-link{
     background-color: var(--accent-color);
     color: var(--global-bg);
 }
+nav a.accent-link:hover{
+    background-color: var(--elevated4-bg);
+    color: var(--default-text-color);
+}
+
 #open-sidebar-btn{
     display:none;
     background: none;
@@ -95,6 +106,10 @@ nav a.accent-link{
     display: none;
 }
 
+/* ==== Main Starts Here ==== */
+
+
+
 @media screen and (max-width: 700px) {
     #open-sidebar-btn, #close-sidebar-btn{
         display: block;
@@ -115,7 +130,7 @@ nav a.accent-link{
     nav.show ~ #overlay{
         display: block;
     }
-    
+
     nav ul{
         width: 100%;
         flex-direction: column;
