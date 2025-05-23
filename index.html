@@ -16,7 +16,7 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <button id="open-sidebar-btn" onclick="openSidebar()">
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="32"
@@ -31,7 +31,7 @@
     <nav id="navbar">
       <ul>
         <li>
-          <button id="close-sidebar-btn" onclick="closeSidebar()">
+          <button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="close sidebar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="32"
@@ -44,12 +44,13 @@
             </svg>
           </button>
         </li>
-        <li class="home-li"><a class="active-link" href="#">Home</a></li>
+        <li class="home-li"><a class="active-link" aria-current="page">Home</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact</a></li>
         <li><a class="accent-link" href="#">Book Now</a></li>
       </ul>
     </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
     <main>
       <h1>Welcome to Cimagraphy</h1>
       <p>
