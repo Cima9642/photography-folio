@@ -31,7 +31,12 @@ html {
   color: var(--default-text-color);
   font-family: var(--body-font);
 }
-
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--header-font);
+}
+svg path {
+    fill: var(--default-text-color)
+}
 nav {
     background-color: var(--elevated1-bg);
     border-bottom: 1px solid var(--elevated4-bg);
@@ -66,7 +71,28 @@ nav a.accent-link{
     background-color: var(--accent-color);
     color: var(--global-bg);
 }
+#open-sidebar-btn{
+    display:none;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+    color: var(--default-text-color);
+
+}
+#close-sidebar-btn{
+    display: none;
+    background: none;
+    border: none;
+    padding:1em;
+    cursor: pointer;
+    color: var(--default-text-color);
+}
 @media screen and (max-width: 700px) {
+    #open-sidebar-btn, #close-sidebar-btn{
+        display: block;
+    }
     nav {
         position: fixed;
         top: 0;
