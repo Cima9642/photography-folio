@@ -16,7 +16,13 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+    <button
+      id="open-sidebar-btn"
+      onclick="openSidebar()"
+      aria-label="open sidebar"
+      aria-expanded="false"
+      aria-controls="navbar"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="32"
@@ -31,7 +37,11 @@
     <nav id="navbar">
       <ul>
         <li>
-          <button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="close sidebar">
+          <button
+            id="close-sidebar-btn"
+            onclick="closeSidebar()"
+            aria-label="close sidebar"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="32"
@@ -44,22 +54,34 @@
             </svg>
           </button>
         </li>
-        <li class="home-li"><a class="active-link" aria-current="page">Cimagraphy</a></li>
+        <li class="home-li">
+          <a class="active-link" aria-current="page">Cimagraphy</a>
+        </li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Investment</a></li>        
+        <li><a href="#">Investment</a></li>
         <li><a class="accent-link" href="#">Book Now</a></li>
       </ul>
     </nav>
     <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
-    <main>
-      <h1>Welcome to Cimagraphy</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Necessitatibus, iste deleniti natus optio animi qui dolore consectetur
-        sed molestias minima illum quam soluta aperiam eligendi. Ratione commodi
-        a asperiores facilis.
-      </p>
+   
+    <main>    
+         <div class="title-wrapper">
+    
+       <div class="title-main">
+          <h1 class="name-scroll" behavior="scroll" direction="left">Carlos Martinez: Life Style & Documentary Photographer</h1>
+        </div>
+        </div>  
+     
+      
+      <div class="cards-wrapper-home">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Necessitatibus, iste deleniti natus optio animi qui dolore consectetur
+          sed molestias minima illum quam soluta aperiam eligendi. Ratione
+          commodi a asperiores facilis.
+        </p>
+      </div>
     </main>
 
     <!---  <img src="https://res.cloudinary.com/do8hegww8/image/upload/v1747831412/IMG_7199-min_mcpoam.jpg" alt="Picture of a library">-->

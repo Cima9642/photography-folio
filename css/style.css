@@ -107,6 +107,31 @@ nav a.accent-link:hover{
 }
 
 /* ==== Main Starts Here ==== */
+.title-wrapper{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.title-main{   
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.name-scroll {
+
+    /*display: flex;*/
+    align-items: center;
+    margin-right: .1em;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    font-size: 6rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: bold;
+    animation: scrolling 10s linear infinite;
+    
+
+}
 
 
 
