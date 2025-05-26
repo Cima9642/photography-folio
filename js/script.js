@@ -31,3 +31,17 @@ function closeSidebar() {
 }
 
 updateNavbar(media);
+
+window.onload = function () {
+    const scrollText = document.querySelector("#scrollText");
+    const textWidth = scrollText.offsetWidth;
+    const containerWidth = scrollText.parentElement.offsetWidth;
+    const distance = textWidth + containerWidth;
+
+    const speed = 100; // pixels per second (lower is slower)
+    const duration = distance / speed;
+
+    scrollText.style.animationDuration = `${duration}s`;
+    scrollText.style.setProperty("--scroll-distance", `-${textWidth}px`);
+  };
+
