@@ -32,16 +32,24 @@ function closeSidebar() {
 
 updateNavbar(media);
 
-window.onload = function () {
-    const scrollText = document.querySelector("#scrollText");
-    const textWidth = scrollText.offsetWidth;
-    const containerWidth = scrollText.parentElement.offsetWidth;
-    const distance = textWidth + containerWidth;
+//SCROLLER 
+const scrollers = document.querySelectorAll(".scroller");
 
-    const speed = 100; // pixels per second (lower is slower)
-    const duration = distance / speed;
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    addAnimation();
+};
 
-    scrollText.style.animationDuration = `${duration}s`;
-    scrollText.style.setProperty("--scroll-distance", `-${textWidth}px`);
-  };
+function addAnimation() {
+    scrollers.forEach((scroller) => {
+        scroller.setAttribute("data-animated", true);
 
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", "true");
+            scrollerInner.appendChild(duplicatedItem);
+        })
+    });
+}
