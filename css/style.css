@@ -111,10 +111,11 @@ nav a.accent-link:hover {
 
 /* ==== Scroller goes here ==== */
 .scroller {
-  max-width: 600px; /*CHANGE THIS MAYBE*/
+  width: 100%; /*CHANGE THIS MAYBE*/
 }
 .tag-list {
-  font-size: 3rem;
+  font-size: 11rem;
+  color: var(--elevated4-bg)
 }
 .scroller__inner {
   padding-block: 1rem;
@@ -124,17 +125,18 @@ nav a.accent-link:hover {
 }
 .scroller[data-animated="true"] {
   overflow: hidden;
-  border: 1px solid lime;
+  
   /*Test without mask*/
-  -webkit-mask: linear-gradient(
+  /*-webkit-mask: linear-gradient(
     90deg,
     transparent,
     white 20%,
     white 80%,
     transparent
-  );
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-}
+  );*/
+  /*mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  */
+  }
 .scroller[data-animated="true"] .scroller__inner {
   flex-wrap: nowrap;
   animation: scroll 20s linear infinite;
