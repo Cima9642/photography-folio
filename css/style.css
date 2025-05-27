@@ -4,7 +4,10 @@
   --body-font: "Playfair Display", serif;
   --logo-font: "Cookie", cursive;
   --nav-font: "Inter", sans-serif;
+  --title-font:  "Bebas Neue", sans-serif; /* NOT USED BUT MAYBEs */
   /* ===== Root Variables for Colors ===== */
+  --side-bar-bg: rgba(0, 0, 0, 0.5);
+  --scroller-color: rgba(255, 255, 255, 0.9);
   --accent-color: hsl(47.2, 100%, 40.12%);
   --global-bg: hsl(240, 7.69%, 7.65%);
   --elevated1-bg: hsl(
@@ -24,6 +27,8 @@
     17.65%
   ); /* Hover states, focus indicators, and other highly interactive elements.*/
   --default-text-color: #f0f0f0;
+
+  
 }
 
 html {
@@ -102,7 +107,7 @@ nav a.accent-link:hover {
 }
 
 #overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--side-bar-bg);
   position: fixed;
   inset: 0;
   z-index: 9;
@@ -111,31 +116,34 @@ nav a.accent-link:hover {
 
 /* ==== Scroller goes here ==== */
 .scroller {
-  width: 100%; /*CHANGE THIS MAYBE*/
+  width: 100%; 
 }
 .tag-list {
   font-size: 11rem;
-  color: var(--elevated4-bg)
-}
+  color: var(--scroller-color);
+  
+  font-weight: bold;
+  
+  }
 .scroller__inner {
   padding-block: 1rem;
   display: flex;
-  flex-wrap: wrap; /*CHANGE THIS MAYBE*/
-  gap: 1rem; /*CHANGE THIS MAYBE*/
+  flex-wrap: wrap; 
+  gap: 1rem; 
 }
 .scroller[data-animated="true"] {
   overflow: hidden;
   
   /*Test without mask*/
-  /*-webkit-mask: linear-gradient(
+  webkit-mask: linear-gradient(
     90deg,
     transparent,
-    white 20%,
-    white 80%,
+    white 10%,
+    white 90%,
     transparent
-  );*/
-  /*mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  */
+  );
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+  
   }
 .scroller[data-animated="true"] .scroller__inner {
   flex-wrap: nowrap;
@@ -148,7 +156,11 @@ nav a.accent-link:hover {
         transform: translate(calc(-50% - 0.5rem));
     }
 }
+
 /* ==== Main Starts Here ==== */
+.cards-wrapper-home{
+  display: grid;
+}
 
 @media screen and (max-width: 700px) {
   #open-sidebar-btn,
